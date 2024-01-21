@@ -1,6 +1,48 @@
 body {
   background: #00091b;
   color: #fff;
+  overflow-x: hidden;
+}
+
+.pLogo {
+  width: 100px;
+  height: 100px;
+  /* margin-left: 50%; */
+  /* margin-right: 50%; */
+  /* margin-right: 50px; */
+}
+
+.clientLogo {
+  height: 20px;
+  /* heighst: 10vh; */
+  /* width:vh; */
+  /* width: 10vh; */
+  /* aspect-ratio: 1; */
+  flex: 1;
+}
+
+.clientLogoWraper {
+  /* margin-top: 70px; */
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  margin-top: 10vh;
+  width: 98vw;
+
+  /* overflow-x: hidden; */
+}
+
+@media screen and (max-width: 665px) {
+  .clientLogoWraper {
+    flex-direction: column;
+  }
+}
+
+.logoWrapper {
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  display: flex;
 }
 
 @keyframes fadeIn {
@@ -25,14 +67,20 @@ body {
   }
 }
 
+.TextWrap {
+  text-align: center;
+  /* overflow-x: hidden; */
+}
+
 .wrapper {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   animation: fadeIn 1000ms ease;
   -webkit-animation: fadeIn 1000ms ease;
+  /* overflow-x: hidden; */
 }
 
 h1 {
@@ -52,32 +100,4 @@ p {
   margin: 18px;
   font-family: "Muli", sans-serif;
   font-weight: normal;
-}
-
-.icons {
-  text-align: center;
-}
-
-.icons i {
-  color: #00091b;
-  background: #fff;
-  height: 15px;
-  width: 15px;
-  padding: 13px;
-  margin: 0 10px;
-  border-radius: 50px;
-  border: 2px solid #fff;
-  transition: all 200ms ease;
-  text-decoration: none;
-  position: relative;
-}
-
-.icons i:hover,
-.icons i:active {
-  color: #fff;
-  background: none;
-  cursor: pointer !important;
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  text-decoration: none;
 }
