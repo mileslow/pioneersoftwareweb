@@ -41,7 +41,7 @@ export default function App() {
             display: "flex",
           }}
         >
-          <a href="www.buoy.studio">
+          <a href="https:://www.buoy.studio">
             <img style={{ height: "16vh", width: "36vh" }} src={Buoy}></img>
           </a>
         </div>
