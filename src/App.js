@@ -41,7 +41,7 @@ export default function App() {
             display: "flex",
           }}
         >
-          <a href="https:://www.buoy.studio">
+          <a href="https://buoy.studio/">
             <img style={{ height: "16vh", width: "36vh" }} src={Buoy}></img>
           </a>
         </div>
@@ -56,7 +56,7 @@ export default function App() {
             display: "flex",
           }}
         >
-          <a href="https://www.syd-kyn.com/password">
+          <a href="https://www.syd-kyn.com/">
             <img style={{ height: "10vh", width: "9.2vh" }} src={SydKyn}></img>
           </a>
         </div>
