@@ -8,11 +8,6 @@ import Alienware from '../images/alienware.webp';
 import Nextworld from '../images/nextworld.webp';
 import ZDX from '../images/zdx.avif';
 
-// Placeholder images - replace with actual project images
-const NETFLIX_PROJECT = 'https://placehold.co/1200x800/0a1a3d/ffffff';
-const ACURA_PROJECT = 'https://placehold.co/1200x800/0a1a3d/ffffff';
-const AMD_PROJECT = 'https://placehold.co/1200x800/0a1a3d/ffffff';
-
 const ClientSection = ({ 
   logo, 
   secondaryLogo, 
