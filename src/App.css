@@ -101,3 +101,144 @@ p {
   font-family: "Muli", sans-serif;
   font-weight: normal;
 }
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 9, 27, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4febfe;
+}
+
+.contact-button-wrapper {
+  position: relative;
+  margin-top: 3rem;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  position: relative;
+  padding: 12px 32px;
+  border-radius: 25px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.3s ease 2.5s forwards;
+  border: 1px solid transparent;
+  animation: fadeIn 0.3s ease 2.5s forwards,
+            glowBorder 0.5s ease 2.5s forwards;
+}
+
+.laser-outline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  overflow: visible;
+}
+
+.laser-outline::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #4febfe;
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: tracePill 2s ease-in-out forwards;
+  box-shadow: 
+    0 0 15px #4febfe,
+    0 0 25px #4febfe,
+    0 0 35px #4febfe;
+}
+
+.laser-outline::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #4febfe, transparent);
+  filter: blur(2px);
+  opacity: 0.7;
+  animation: tracePill 2s ease-in-out forwards;
+  transform: translateX(-50%);
+}
+
+.contact-button:hover {
+  background: linear-gradient(135deg, rgba(79, 235, 254, 0.3), rgba(79, 235, 254, 0.1));
+  transform: translateY(-2px);
+  border-color: rgba(79, 235, 254, 0.5);
+  box-shadow: 0 0 15px rgba(79, 235, 254, 0.3);
+}
+
+@keyframes glowBorder {
+  from {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  to {
+    border-color: rgba(79, 235, 254, 0.5);
+    box-shadow: 0 0 10px rgba(79, 235, 254, 0.2);
+  }
+}
+
+@keyframes tracePill {
+  0% {
+    opacity: 1;
+    offset-path: path('M 0,25 A 25,25 0 0 1 25,0 H 155 A 25,25 0 0 1 180,25 A 25,25 0 0 1 155,50 H 25 A 25,25 0 0 1 0,25');
+    offset-distance: 0%;
+  }
+  100% {
+    opacity: 0;
+    offset-path: path('M 0,25 A 25,25 0 0 1 25,0 H 155 A 25,25 0 0 1 180,25 A 25,25 0 0 1 155,50 H 25 A 25,25 0 0 1 0,25');
+    offset-distance: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
