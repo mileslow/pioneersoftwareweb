@@ -3,9 +3,11 @@ import "./App.css";
 import PioneerLogo from "./images/PioneerLogo.png";
 import Clients from "./pages/Clients";
 import { useState, useEffect } from "react";
+import ContactModal from './components/ContactModal';
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,10 +32,16 @@ const Home = () => {
         {showButton && (
           <>
             <div className="laser-outline" />
-            <button className="contact-button">Contact Us</button>
+            <button className="contact-button" onClick={() => setIsModalOpen(true)}>
+              Contact Us
+            </button>
           </>
         )}
       </div>
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 };
